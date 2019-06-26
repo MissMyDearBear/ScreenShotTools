@@ -16,6 +16,9 @@ import com.bear.screenshot.model.config.ERROR_ACHIEVE_MAX_HEIGHT
 import com.bear.screenshot.model.i.IBitmapConvert
 import com.bear.screenshot.model.i.IBitmapConvertCallBack
 import com.bear.screenshot.utils.dip2px
+import android.opengl.ETC1.getWidth
+
+
 
 
 /**
@@ -171,20 +174,13 @@ class BitmapConvertImpl : IBitmapConvert {
     private fun webViewConvert(webView: WebView, callBack: IBitmapConvertCallBack?) {
         var contBmp: Bitmap?
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            //获取webview缩放率
-            try {
-                val scale = webView.scale
-                //得到缩放后webview内容的高度
-                val webViewHeight = (webView.contentHeight * scale).toInt()
-                contBmp = Bitmap.createBitmap(webView.width, webViewHeight, Bitmap.Config.ARGB_4444)
-                val canvas = Canvas(contBmp)
-                //绘制
-                webView.draw(canvas)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                contBmp = null
-            }
-
+            val scale = webView.scale
+            val width = webView.width
+            val height = (webView.contentHeight * scale + 0.5).toInt()
+            val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
+            val canvas = Canvas(bitmap)
+            webView.draw(canvas)
+            contBmp = bitmap
         } else {
             //获取Picture对象
             val picture = webView.capturePicture()

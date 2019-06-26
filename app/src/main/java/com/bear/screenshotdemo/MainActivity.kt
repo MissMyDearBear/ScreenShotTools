@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 ViewScreenActivity.action(this)
             }
             button2 -> {
-
+                ScrollViewActivity.action(this)
             }
             button3 -> {
-
+                RecyclerViewActivity.action(this)
             }
             button4 -> {
-
+                WebViewActivity.action(this)
             }
         }
     }

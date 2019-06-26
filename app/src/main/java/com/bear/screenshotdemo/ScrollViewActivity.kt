@@ -7,23 +7,25 @@ import android.support.v7.app.AppCompatActivity
 import com.bear.screenshot.ScreenShotTools
 import com.bear.screenshot.model.ScreenBitmap
 import com.bear.screenshot.model.i.IScreenShotCallBack
-import kotlinx.android.synthetic.main.activity_view.*
+import kotlinx.android.synthetic.main.activity_scroll_view.*
 
 /**
  * description:
  * author: bear .
- * Created date:  2019-06-25.
+ * Created date:  2019-06-26.
  * mail:2280885690@qq.com
  */
-class ViewScreenActivity : AppCompatActivity() {
+class ScrollViewActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view)
-        ll.setOnClickListener {
-            ScreenShotTools.instance.takeCapture(this, ll, object : IScreenShotCallBack {
+        setContentView(R.layout.activity_scroll_view)
+        tv.setOnClickListener {
+            ScreenShotTools.instance.takeCapture(this, scroll_view, object : IScreenShotCallBack {
                 override fun onResult(screenBitmap: ScreenBitmap?) {
-                    //todo do your things
+                //todo do your things
                 }
+
             })
         }
     }
@@ -31,7 +33,7 @@ class ViewScreenActivity : AppCompatActivity() {
     companion object {
         @JvmStatic
         fun action(context: Context) {
-            val intent = Intent(context, ViewScreenActivity::class.java)
+            val intent = Intent(context, ScrollViewActivity::class.java)
             context.startActivity(intent)
         }
     }
