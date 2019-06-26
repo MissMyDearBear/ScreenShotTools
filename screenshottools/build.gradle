@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 27
@@ -22,7 +23,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+}
 
+publish{
+    userOrg = 'missmydearbear'
+    groupId = 'com.bear'
+    artifactId = 'ScreenShotTools'
+    publishVersion = "1.0"
+    desc = "This is a Android screenshot tools"
+    website='https://github.com/MissMyDearBear/ScreenShotTools'
 }
 
 dependencies {

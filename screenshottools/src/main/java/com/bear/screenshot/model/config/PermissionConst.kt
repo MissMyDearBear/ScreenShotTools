@@ -35,14 +35,14 @@ class PermissionConst {
                                 "请开通" + permissionName +
                                         "权限再使用该功能！"
                             )
-                            .setPositiveButton("开启") { dialog, which ->
-                                ActivityCompat.requestPermissions(mActivity!!, arrayOf(permission), request)
+                            .setPositiveButton("开启") { dialog, _ ->
+                                ActivityCompat.requestPermissions(mActivity, arrayOf(permission), request)
                                 dialog.dismiss()
                             }
                             .setNegativeButton("取消", null).create().show()
                     }
                 } else {
-                    ActivityCompat.requestPermissions(mActivity!!, arrayOf(permission), request)
+                    ActivityCompat.requestPermissions(mActivity, arrayOf(permission), request)
                 }
                 return false
             } else {
