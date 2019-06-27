@@ -16,7 +16,7 @@
 ```
 #### 使用方法：
 ##### gradle配置
-1. 在最外层的`build.gradle`中添加maven地址
+1. 在最外层的`build.gradle`中添加maven地址（已传入JCenter，本步骤可以忽略）
 ```
 allprojects {
     repositories {
