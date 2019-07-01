@@ -2,6 +2,8 @@
 
 2017年的时候因项目需要整理了一篇关于[长截图的文章](https://www.jianshu.com/p/980a75a31f2f)。看到很多同学有留言，所以现在决定把它重新梳理一下，做成一个开源的库。
 
+![效果图](https://github.com/MissMyDearBear/ScreenShotTools/blob/master/gif/demo.gif)
+
 ### ScreenShotTools
 
 `ScreenShotTools`是一个Android长截图工具。目的是轻松搞定常见的View截图功能。
@@ -14,7 +16,7 @@
 4. View的截图
 5. 各截图提供拼接头部和尾部功能
 ```
-![效果图](https://github.com/MissMyDearBear/ScreenShotTools/blob/master/gif/demo.gif)
+
 #### 使用方法：
 ##### gradle配置
 1. 在最外层的`build.gradle`中添加maven地址（已传入JCenter，本步骤可以忽略）
