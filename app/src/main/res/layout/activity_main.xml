@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <Button
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="46dp"
-            android:id="@+id/button"
-            android:layout_marginTop="20dp"
-            android:text="view"/>
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="view"
+        tools:layout_editor_absoluteY="46dp" />
+
     <Button
-            android:layout_marginTop="20dp"
-            android:text="scrollView"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="138dp"
-            tools:layout_editor_absoluteX="161dp" android:id="@+id/button2"/>
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="scrollView"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="138dp" />
+
     <Button
-            android:layout_marginTop="20dp"
-            android:text="RecyclerView"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="234dp"
-            tools:layout_editor_absoluteX="161dp" android:id="@+id/button3"/>
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="RecyclerView"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="234dp" />
+
     <Button
-            android:layout_marginTop="20dp"
-            android:text="webView"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="329dp"
-            tools:layout_editor_absoluteX="161dp" android:id="@+id/button4"/>
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="webView"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="329dp" />
 </LinearLayout>

@@ -22,7 +22,9 @@ class ViewScreenActivity : AppCompatActivity() {
         ll.setOnClickListener {
             ScreenShotTools.instance.takeCapture(this, ll, object : IScreenShotCallBack {
                 override fun onResult(screenBitmap: ScreenBitmap?) {
-                    //todo do your things
+                    screenBitmap?.let {
+                        ShowScreenImageActivity.action(this@ViewScreenActivity,it.filePath)
+                    }
                 }
             })
         }

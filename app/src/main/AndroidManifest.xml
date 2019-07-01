@@ -25,6 +25,9 @@
                   android:screenOrientation="portrait"/>
         <activity android:name="com.bear.screenshotdemo.RecyclerViewActivity"
                   android:screenOrientation="portrait"/>
+        <activity android:name="com.bear.screenshotdemo.ShowScreenImageActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

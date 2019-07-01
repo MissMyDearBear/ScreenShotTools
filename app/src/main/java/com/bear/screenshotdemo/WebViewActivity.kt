@@ -35,7 +35,9 @@ class WebViewActivity : AppCompatActivity() {
         tv.setOnClickListener {
             ScreenShotTools.instance.takeCapture(this, web_view, object : IScreenShotCallBack {
                 override fun onResult(screenBitmap: ScreenBitmap?) {
-                    //todo do your things
+                    screenBitmap?.let {
+                        ShowScreenImageActivity.action(this@WebViewActivity,it.filePath)
+                    }
                 }
             })
         }

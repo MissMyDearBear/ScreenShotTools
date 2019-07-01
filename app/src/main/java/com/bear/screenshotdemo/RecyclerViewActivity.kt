@@ -23,7 +23,9 @@ class RecyclerViewActivity : AppCompatActivity() {
         tv.setOnClickListener {
             ScreenShotTools.instance.takeCapture(this, recycler_view, object : IScreenShotCallBack {
                 override fun onResult(screenBitmap: ScreenBitmap?) {
-                    //todo do your things
+                    screenBitmap?.let {
+                        ShowScreenImageActivity.action(this@RecyclerViewActivity,it.filePath)
+                    }
                 }
 
             })
