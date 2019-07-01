@@ -14,7 +14,7 @@
 4. View的截图
 5. 各截图提供拼接头部和尾部功能
 ```
-[效果图](https://github.com/MissMyDearBear/ScreenShotTools/blob/master/gif/demo.gif)
+![效果图](https://github.com/MissMyDearBear/ScreenShotTools/blob/master/gif/demo.gif)
 #### 使用方法：
 ##### gradle配置
 1. 在最外层的`build.gradle`中添加maven地址（已传入JCenter，本步骤可以忽略）
